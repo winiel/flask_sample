@@ -1,4 +1,4 @@
-from app.router import app
+from app.router import app as application
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    application.run(debug=True)

@@ -1,6 +1,8 @@
 from flask import render_template
 
 from app import app
+from util.db_util import DbUtil
+
 
 @app.route('/')
 def home():
@@ -13,12 +15,10 @@ def home():
 
 @app.route('/test')
 def test():
-    # dbUtil = DbUtil();
-    # dbUtil = DbUtil();
-    #
-    # sql = "SELECT * FROM abitree.tbl_test";
-    # res = dbUtil.exeQuery(sql, None );
-    # print(res);
+    dbUtil = DbUtil();
+    sql = "SELECT * FROM abitree.tbl_test";
+    res = dbUtil.exeQuery(sql, None );
+    print(res);
     return "hello12";
 
 

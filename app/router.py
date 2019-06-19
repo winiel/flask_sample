@@ -1,10 +1,6 @@
-from flask import Flask, render_template, request
+from flask import render_template
 
-# from application.controller.push_mail import PushMail
-
-
-app = Flask(__name__)
-
+from app import app
 
 @app.route('/')
 def home():
@@ -36,6 +32,3 @@ def PostMail():
 
     return "post_mail22";
 
-
-if __name__ == '__main__':
-    app.run()
